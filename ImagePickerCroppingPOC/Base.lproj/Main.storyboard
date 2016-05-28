@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePickerCroppingPOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-79-6hp">
+                                <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="BSA-kB-xCs"/>
+                                    <constraint firstAttribute="height" constant="350" id="Byh-mG-rzh"/>
+                                    <constraint firstAttribute="height" constant="358" id="Vr3-0f-igJ"/>
+                                    <constraint firstAttribute="width" constant="560" id="qyd-F2-ioy"/>
+                                    <constraint firstAttribute="height" constant="300" id="tzy-NG-m5Y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BSA-kB-xCs"/>
+                                        <exclude reference="Byh-mG-rzh"/>
+                                        <exclude reference="Vr3-0f-igJ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs9-Ub-ysv">
+                                <rect key="frame" x="270" y="435" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="A1I-oh-gdM"/>
+                                    <constraint firstAttribute="width" constant="60" id="j0V-ZA-APs"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.1081682321" blue="0.092295735389999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="cameraLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIv-jQ-rWK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87311698719999997" green="0.87311698719999997" blue="0.87311698719999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FOu-79-6hp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0hx-vj-6KL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xs9-Ub-ysv" secondAttribute="bottom" constant="105" id="1k2-BE-OXU"/>
+                            <constraint firstItem="xs9-Ub-ysv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BxG-e2-upE"/>
+                            <constraint firstItem="FOu-79-6hp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="H6i-db-cGS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xs9-Ub-ysv" secondAttribute="trailing" constant="250" id="MeW-YS-MNr"/>
+                            <constraint firstItem="xs9-Ub-ysv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="250" id="PBz-mG-0gI"/>
+                            <constraint firstItem="xs9-Ub-ysv" firstAttribute="top" secondItem="FOu-79-6hp" secondAttribute="bottom" constant="115" id="ahK-5I-vge"/>
+                            <constraint firstItem="xs9-Ub-ysv" firstAttribute="top" secondItem="FOu-79-6hp" secondAttribute="bottom" constant="57" id="drM-Dj-N06"/>
+                            <constraint firstItem="FOu-79-6hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n7E-Gw-hqN"/>
+                            <constraint firstItem="FOu-79-6hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nEB-d5-vYz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nEB-d5-vYz"/>
+                                <exclude reference="MeW-YS-MNr"/>
+                                <exclude reference="PBz-mG-0gI"/>
+                                <exclude reference="drM-Dj-N06"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="xs9-Ub-ysv" id="uWb-An-Lq4"/>
+                        <outlet property="photo" destination="FOu-79-6hp" id="sTf-of-0vZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="338"/>
+        </scene>
+    </scenes>
+</document>
